@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- form태그의 속성
+    method : 사용자가 입력한 내용을 서버쪽 프로그램으로 어떻게 넘길거냐?
+     1.get : 주소 표시줄에 사용자가 입력한 방식이 그대로 들어나는 단점이 있음(보안문제)
+         256~4096byte 까지만 서버로 넘길 수 있음.
+     2.post : 길이에 대한 제한이 없음. 사용자가 입력한 내용이 보이지 않음
+    name : 자바스크립트로 폼을 제어할 때 사용할 폼의 이름을 지정
+    action : 폼 태그 안에서 내용을 처리해줄 서버프로그램 지정
+    target : action 속성에서 지정한 스크립트 파일을 현재 창이 아닌 다른위치에서 열도록 한다.
+ -->
+
+    <!-- label태그 : input태그와 갚은 폼 요소에 레이블을 붙힐 때 사용
+입력란 가까이에 아이디나 비번처럼 붙혀놓은 텍스트임.
+레이블 태그를 사용하게 되면 폼 요소와 레이블 텍스트가 서로 연결되어 있다라는 걸 웹브라우저가 알 수 있다.
+ -->
+
+    <!-- 레이블 태그를 사용한 방법 첫번 째 -->
+    <label>아이디 입력<input type="text"></label>
+
+    <!-- 레이블 태그를 사용한 방법 두번 째 -->
+    <label for="user_id">아이디 입력</label>
+    <input type="text" id="user_id" />
+
+    <!-- 하나의 폼 안에서 여러 구역을 나누어 표시할 때 -->
+    <!-- <fieldset></fieldset> -->
+    <form>
+        <fieldset>
+            <!-- fieldset태그로 묶은 그룹에 제목을 붙힌다. -->
+            <legend>상품선택</legend>
+        </fieldset>
+        <fieldset>
+            <legend>배송정보</legend>
+        </fieldset>
+    </form>
+
+    <!---------------------------------------->
+
+    <form action="">
+        <!-- size : 텍스트와 칸에 길이를 지정해줌 -->
+        <fieldset>
+            <label>아이디 : <input type="text" id="user_id" size="10"></label>
+            <label>비밀번호 : <input type="password" id="user_id" size="10"></label>
+            <input type="submit" value="로그인">
+        </fieldset>
+
+
+    </form>
+
+    <!---------------------------------------->
+
+    <form action="">
+        <fieldset>
+            <legend>배송정보</legend>
+            <ul>
+                <li>
+                    <label for="user_name">이름</label>
+                    <input type="text" id="user_name" />
+                </li>
+                <li>
+                    <label for="addr">배송주소</label>
+                    <input type="text" id="addr">
+                </li>
+                <li>
+                    <label for="mail">이메일</label>
+                    <input type="eamil" id="mail">
+                </li>
+                <li>
+                    <label for="phone">전화번호</label>
+                    <input type="tel" id="phone">
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+
+</html>

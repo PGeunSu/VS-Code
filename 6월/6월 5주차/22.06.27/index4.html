@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="user" type="text" value="입력하시오">
+</body>
+<div style="color : red">돔제어</div>
+<script>
+    // const { attr } = document.getElementById("user");
+    const $input = document.getElementById("user");
+    console.log($input);
+    //value attribute 값을 가져옴
+    const inputValue = $input.getAttribute("value");
+    console.log(inputValue); //입력하시오
+    //value attribute값을 변경 -> test
+    $input.setAttribute("value", "test");
+    console.log($input.getAttribute("value")); //test
+
+    //value attribute가 있냐?
+    if ($input.hasAttribute('value')) {
+        //삭제
+        $input.removeAttribute('value')
+    }
+
+    const $div = document.querySelector("div");
+
+    $div.style.color = "blue";
+    $div.style.width = "100px";
+    $div.style.backgroundColor = "yellow";
+</script>
+
+</html>

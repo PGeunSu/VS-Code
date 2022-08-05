@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="plus();">증가</button>
+    <button onclick="minus();">감소</button>
+    <button onclick="re()">초기화</button>
+
+    <span id="result1">0</span>
+
+    <script>
+        let result1 = 0;
+        function re() {
+            result1 = 0;
+            document.getElementById("result1").innerHTML = result1;
+        }
+        function plus() {
+            result1++;
+            document.getElementById("result1").innerHTML = result1;
+        }
+        function minus() {
+            result1--;
+            document.getElementById("result1").innerHTML = result1;
+        }
+    </script>
+</body>
+
+</html>

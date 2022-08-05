@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="fruit"></ul>
+    <script>
+        const $fruits = document.getElementById("fruit");
+        //forEach 배열요소에만 사용 가능 
+        ['apple', 'banana', 'orange'].forEach(text => {
+            // 요소노드 생성
+            const $li = document.createElement('li');
+            //텍스트 노드 생성
+            const textNode = document.createTextNode(text);
+            $li.appendChild(textNode);
+            $fruits.appendChild($li);
+        });   
+    </script>
+</body>
+
+</html>

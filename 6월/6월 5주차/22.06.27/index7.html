@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        const $box = document.querySelector(".box");
+
+        //객체는 마우스 포인터의 좌표를 나타냄
+        const initMousePos = { x: 0, y: 0 };
+        const offset = { x: 0, y: 0 };
+
+        const move = e => {
+            //오프셋 = 현재 마우스포인터 위치 - 드래그 시작 시점의 마우스 포인터 위치   
+            offset.x = e.clientX - initMousePos.x;
+            offset.y = e.clientY - initMousePos.y;
+
+            $box.style.transform = `translate3d(${offset.x}px, ${offset.y}px, 0)`;
+        }
+        //mousedown이벤트가 발생하면 드래그 시작 시점의 마우스 포인터 좌표를 나타냄
+        $box.addEventListener('mousedown', e => {
+            initMousePos.x = e.clientX = offset.x;
+            initMousePos.y = e.clientY = offset.y;
+
+            document.addEventListener("mousemove", move);
+        });
+        document.addEventListener("mouseup", () => {
+            document.removeEventListener("mousemove", move);
+        })
+
+        /*
+        마우스 포인터 좌표는 MouseEvent타입의 이벤트 객체에서 제공하낟.
+        마우스 포인터 좌표는 나타내는 좌표 정보를 나타내는 screenX/screenY,
+        clientX/clientY, offsetX/offsetY 프로퍼티를 제공한다.
+        client X,Y는 웹페이지의 가시영역을 기준으로 마우스 포인터 좌표를 나타낸다.
+        */
+
+
+    </script>
+</body>
+
+</html>

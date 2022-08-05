@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="fruits">
+        <li class="apple">apple</li>
+        <!-- <li class="banana">banana</li>
+        <li class="orange">orange</li> -->
+    </ul>
+    <div id="foo">Hello<span>world</span></div>
+    <script>
+        // const $banana = document.querySelector(".banana")
+        // //parentNode : 부모노드를 탐색한다.
+        // console.log($banana.parentNode);
+        // //textContent : 해당 아이디의 모든 텍스트 출력 (HTML마크업 무시)
+        // // console.log(document.getElementById("foo").textContent); //Helloworld
+
+        // //innerHTML :  컨텐츠 영역 내 포함된 모든 문자 마크열을 문자로 출력.
+        // console.log(document.getElementById("foo").innerHTML); //Hello<span>world</span>
+
+        const $fruits = document.getElementById("fruits");
+
+        //1. 요소 노드 생성
+        const $li = document.createElement('li');
+        //2. 텍스트 노드 생성
+        const textNode = document.createTextNode('Banana');
+        //3. 텍스트 노드를 ($li)요소 노드의 자식 노드로 추가
+        $li.appendChild(textNode);
+        // ($li)요소 노드를 $fruits요소 노드의 마지막 자식 노드로 추가
+        $fruits.appendChild($li);
+
+
+    </script>
+</body>
+
+</html>

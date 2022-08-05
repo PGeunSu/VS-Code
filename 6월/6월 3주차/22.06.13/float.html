@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            /* 해당요소를 문서 왼쪽에 배치한다. */
+            float: left;
+            margin-right: 40px;
+        }
+
+        /* float 속성을 사용하여 오른족이나 왼쪽에 배치를 하면
+        그 다음에 넣는 다른 요소에도 똑같은 속성이 전달된다. 
+        그래서 float 속성이 더이상 유용하지 않다고 알려줘야한다. clear */
+
+        div {
+            padding: 20px;
+            margin: 10px;
+        }
+
+        #box1 {
+            background: red;
+            float: left;
+        }
+
+        #box2 {
+            background: rgb(87, 48, 48);
+            float: left;
+        }
+
+        #box3 {
+            background: rgb(34, 4, 4);
+            clear: left;
+        }
+
+        #box4 {
+            background: rgb(65, 150, 43);
+            clear: left;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <img src="apple.jpg" alt="">
+    <p>ddddddddddddddddddddddddddddddddd</p> -->
+
+    <div id="box1">박스1</div>
+    <div id="box2">박스2</div>
+    <div id="box3">박스3</div>
+    <div id="box4">박스4</div>
+</body>
+
+</html>

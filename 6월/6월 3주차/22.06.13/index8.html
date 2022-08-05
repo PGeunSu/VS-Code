@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        #container {
+            background-color: gold;
+            width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        table.th,
+        td {
+            border: 1px solid beige;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<!-- 마진을 이용해서 웹문서의 내용을 화면중앙에 배치하고 싶다면 배치할 요소의 너비값이 정해져 있어야 한다. -->
+
+<body>
+
+    <div id="container">
+        <h1>김치찌개</h1>
+        <P>돼지고기 <b>김치찌개</b> 맛내는 비법</P>
+        <p>돼지고기는 분량의 양념을 넣어 조물조물 해주신후 <br>30분 이상 재웁니다.</p>
+        <hr>
+        <h2>레시피</h2>
+        <p><b>재료:</b>신김치, 앞다리살, 설탕, 간장 , 고춧가루</p>
+        <p><b>냠냠:</b> 설탕, 간장 , 고춧가루</p>
+
+        <ol>
+            <li>김치</li>
+            <li>고춧가루</li>
+            <li>밥</li>
+            <li>참치</li>
+
+        </ol>
+
+        <hr>
+        <h2>상품구성</h2>
+        <table>
+            <caption>선물용과 가정용</caption>
+            <colgroup>
+                <col style="background-color:gray">
+                <col>
+                <!-- 여기 잠깐 -->
+                <col span="2" style="width: 200px;">
+
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>용도</th>
+                    <th>무게</th>
+                    <th>가격</th>
+                    <th>개수</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td rowspan="2">선물용</td>
+                    <td>3kg</td>
+                    <td>15개</td>
+                    <td>30,000</td>
+                </tr>
+                <tr>
+
+                    <td>3kg</td>
+                    <td>15개</td>
+                    <td>30,000</td>
+                </tr>
+
+            <tbody>
+                <tr>
+                    <td rowspan="2">가정용</td>
+                    <td>3kg</td>
+                    <td>15개</td>
+                    <td>30,000</td>
+                </tr>
+                <tr>
+
+                    <td>5kg</td>
+                    <td>12개</td>
+                    <td>30,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

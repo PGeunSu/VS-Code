@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite
+        }
+
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box red">Hello</div>
+    <script>
+        const $box = document.querySelector(".box");
+        console.log($box.className);
+        console.log($box.classList);
+        //.box요소의 class  attribute값 중에서 red만 blue로 변경
+        // $box.className = $box.className.replace('red', 'blue')
+        $box.classList.replace("red", "blue"); //위와 동일한 기능 
+        //인수로 전달한 1개 이상의 문자열을 class attribute값으로 추가
+        $box.classList.add("foo");
+        //인수로 전달한 1개 이상의 문자열과 일치하는 class를 calss attribute에서 삭제함
+        //일치하는 class가 없을 경우 에러가 뜨며 무시함
+        $box.classList.remove("foo");
+
+        // $box.classList.item(0);
+        //인수로 전달한 index에 해당하는 클래스를 class attribute에서 반환한다.
+        console.log($box.classList.item(0)); //box
+        console.log($box.classList.item(1)); //blue
+
+        //인수로 전달한 문자열과 일치하는 class가 attribute에 있냐?
+        console.log($box.classList.contains("box"));//true
+        console.log($box.classList.contains("red"));//false
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 그리드 레이아웃
+
+        grid:블록레벨
+        inline-grid : 인라인레벨
+
+    -->
+
+    <style>
+        #container {
+            display: grid;
+            /* 그리드 컨테이너안의 항목을 몇개의 컬럼 배치 할것인지,
+            각 컬럼의 너비를 얼마로? */
+            /* grid-template-columns: 200px 200px 200px; */
+            /* 너비가 200px 컬럼이 3개 */
+            /* grid-template-rows: 100px; */
+            /* 줄 높이 */
+
+            /* 반응형 웹에서는 px단위는 적합하지 않다.
+            상대적인 크기를 지정할 수 있도록 fr단위를 쓴다.
+            grid-template-columns: 1fr 1fr 1fr
+            = grid-template-columns: repeat(3,lfr)
+             */
+            /* width: 600px;
+            /* grid-template-columns: repeat(3, 1fr); */
+            /* 너비가 200px 컬럼을 화면 너비에 가득찰 때 까지 배치 */
+            /* grid-template-columns: repeat(auto-fit, 200px); */
+            /* 줄높이는 최소 100px */
+            /* grid-template-rows: minmax(100px, auto); */
+            /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: minmax(100px, auto);
+            grid-gap: 20px 30px;
+        }
+
+
+        #container2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+        }
+
+        .items {
+            background-color: #eee;
+            padding: 10px;
+
+        }
+
+        .items:nth-child(even) {
+            background-color: #bbb;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>auto-fit일떄</h1>
+    <div id="container">
+        <div class="items">
+            프리미어 리그와 UEFA 챔피언스 리그 아시아 선수 역대 최다 득점자이자 최초로 발롱도르 후보 30인[32]과 FIFA FIFPro 월드 XI 후보 55인[33]에 선정됐다.
+            또한 FIFA 푸스카스상을 수상[34]했으며, 프리미어 리그 이달의 선수에 3회 선정되었고,
+
+        </div>
+        <div class="items">
+            프리미어 리그와 UEFA 챔피언스 리그 아시아 선수 역대 최다 득점자이자 최초로 발롱도르 후보 30인[32]과 FIFA FIFPro 월드 XI 후보 55인[33]에 선정됐다.
+            또한 FIFA 푸스카스상을 수상[34]했으며, 프리미어 리그 이달의 선수에 3회 선정되었고,
+
+        </div>
+        <div class="items">
+            프리미어 리그와 UEFA 챔피언스 리그 아시아 선수 역대 최다 득점자이자 최초로 발롱도르 후보 30인[32]과 FIFA FIFPro 월드 XI 후보 55인[33]에 선정됐다.
+            또한 FIFA 푸스카스상을 수상[34]했으며, 프리미어 리그 이달의 선수에 3회 선정되었고,
+
+        </div>
+        <div class="items">
+            프리미어 리그와 UEFA 챔피언스 리그 아시아 선수 역대 최다 득점자이자 최초로 발롱도르 후보 30인[32]과 FIFA FIFPro 월드 XI 후보 55인[33]에 선정됐다.
+            또한 FIFA 푸스카스상을 수상[34]했으며, 프리미어 리그 이달의 선수에 3회 선정되었고,
+
+        </div>
+        <div class="items">
+            프리미어 리그와 UEFA 챔피언스 리그 아시아 선수 역대 최다 득점자이자 최초로 발롱도르 후보 30인[32]과 FIFA FIFPro 월드 XI 후보 55인[33]에 선정됐다.
+            또한 FIFA 푸스카스상을 수상[34]했으며, 프리미어 리그 이달의 선수에 3회 선정되었고,
+
+        </div>
+    </div>
+    <h1>auto-fill일떄</h1>
+    <div id="container2">
+        <div class="items">
+            프리미어 리그와 UEFA 챔피언스 리그 아시아 선수 역대 최다 득점자이자 최초로 발롱도르 후보 30인[32]과 FIFA FIFPro 월드 XI 후보 55인[33]에 선정됐다.
+            또한 FIFA 푸스카스상을 수상[34]했으며, 프리미어 리그 이달의 선수에 3회 선정되었고,
+
+        </div>
+        <div class="items">
+            프리미어 리그와 UEFA 챔피언스 리그 아시아 선수 역대 최다 득점자이자 최초로 발롱도르 후보 30인[32]과 FIFA FIFPro 월드 XI 후보 55인[33]에 선정됐다.
+            또한 FIFA 푸스카스상을 수상[34]했으며, 프리미어 리그 이달의 선수에 3회 선정되었고,
+
+        </div>
+        <div class="items">
+            프리미어 리그와 UEFA 챔피언스 리그 아시아 선수 역대 최다 득점자이자 최초로 발롱도르 후보 30인[32]과 FIFA FIFPro 월드 XI 후보 55인[33]에 선정됐다.
+            또한 FIFA 푸스카스상을 수상[34]했으며, 프리미어 리그 이달의 선수에 3회 선정되었고,
+
+        </div>
+        <div class="items">
+            프리미어 리그와 UEFA 챔피언스 리그 아시아 선수 역대 최다 득점자이자 최초로 발롱도르 후보 30인[32]과 FIFA FIFPro 월드 XI 후보 55인[33]에 선정됐다.
+            또한 FIFA 푸스카스상을 수상[34]했으며, 프리미어 리그 이달의 선수에 3회 선정되었고,
+
+        </div>
+        <div class="items">
+            프리미어 리그와 UEFA 챔피언스 리그 아시아 선수 역대 최다 득점자이자 최초로 발롱도르 후보 30인[32]과 FIFA FIFPro 월드 XI 후보 55인[33]에 선정됐다.
+            또한 FIFA 푸스카스상을 수상[34]했으며, 프리미어 리그 이달의 선수에 3회 선정되었고,
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- input태그의 주요 속성 -->
+    <!-- autofocus : 페이지 로딩이 되면 원하는 폼에서 원하는 요소에 마우스 포인터 표시 -->
+    <label for="user_name">이름</label>
+    <input type="text" id="user_name" autofocus />
+    <label for="phone">연락처</label>
+    <input type="tel" id="phone" placeholder="연락처를 입력하세요.">
+    <!-- placeholder : 힌트 -->
+
+    <form>
+        <fieldset>
+            <legend>상품정보</legend>
+            <ul>
+                <li>
+                    <label for="prod">주문상품</label>
+                    <!-- readonly : 읽기전용 필드를 만든다. (수정 불가) -->
+                    <input type="text" id="prod" value="상품용" readonly>
+                </li>
+                <li>
+                    <label for="user_name">이름</label>
+                    <!-- required : 반드시 입력해야 하는 필드로 만들어 버림. -->
+                    <input type="text" id="user_name" autofocus required>
+                </li>
+            </ul>
+            <label for="memo">메모</label>
+            <!-- cols : 텍스트 영약의 가로 너비를 문자단위로 지정 -->
+            <!-- rows : 텍스트 영약의 세로 길이를 문자단위로 지정
+              지정한 숫자부터 줄 개수가 많아지면 스크롤 막대가 생김 -->
+            <textarea id="memo" cols="30" rows="10"></textarea>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

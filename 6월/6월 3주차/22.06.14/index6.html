@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 구조 가상클래스 : 웹 문서의 구조를 기준으로 특정 위치에 있는 요소를 찾아
+        스타일을 적용할 떄 사용한다.
+        
+        */
+        .contents {
+            margin-top: 30px auto;
+            width: 400px;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        /* contents(부모)안에 있는 p(특정)태그중에서 3번쨰 요소 선택 */
+        .contents p:nth-of-type(3) {
+            background-color: purple;
+        }
+
+        /* 부모안에 있는 모든 요소중에서 n번째 자식요소를 선택한다. */
+        .contents :nth-child(3) {
+            background-color: red;
+        }
+
+        /* only-child : 부모 안에 자식요소가 하나뿐일 떄 자식요소를 선택
+         A(특정태그):only-of-type: 부모 안에 A요소가 하나뿐일 때 
+         :first-child : 부모 안에 있는 모든 요소중에서 첫번 째 자식선택
+         :last-child : 부모 안에 있는 모든 요소중에서 마지막 자식선택
+         A:first-of-type : 부모 안에 A요소중에서 첫번쨰
+         :last-of-type : 부모 안에 A요소중에서 마지막
+         :nth-last-child(n) : 부모 안에 있는 모든 요소중에서서 끝에서 n번쨰 선택
+         A:nth-last-of-type : 부모 안에 있는 A요소 끝에서 n번쨰 선택
+         */
+    </style>
+</head>
+
+<body>
+    <div class="contents">
+        <h2>감자</h2>
+        <p>
+            한국어의 '밥'이라는 어휘는 아무리 늦게 잡아도 고려 시대부터 그 존재가 확인된다.
+            고려가요 중 《상저가》에 등장하고, 계림유사에서도 朴擧(박거)라고 음차되어 있다.
+        </p>
+        <p>
+            한국어의 '밥'이라는 어휘는 아무리 늦게 잡아도 고려 시대부터 그 존재가 확인된다.
+            고려가요 중 《상저가》에 등장하고, 계림유사에서도 朴擧(박거)라고 음차되어 있다.
+        </p>
+        <h2>고구마</h2>
+        <p>
+            한국어의 '밥'이라는 어휘는 아무리 늦게 잡아도 고려 시대부터 그 존재가 확인된다.
+            고려가요 중 《상저가》에 등장하고, 계림유사에서도 朴擧(박거)라고 음차되어 있다.
+        </p>
+        <h2>옥수수</h2>
+
+        <p>
+            한국어의 '밥'이라는 어휘는 아무리 늦게 잡아도 고려 시대부터 그 존재가 확인된다.
+            고려가요 중 《상저가》에 등장하고, 계림유사에서도 朴擧(박거)라고 음차되어 있다.
+        </p>
+
+    </div>
+</body>
+
+</html>
