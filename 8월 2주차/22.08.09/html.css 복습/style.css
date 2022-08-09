@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.box{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    /* relative와 static은 높이 100%가 없음. 대신 100vh가 동일한 효과 */
+
+    /* background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover; */
+
+    background: no-repeat 50% 50% / cover;
+
+}
+
+.box1{
+ background-image: url(/imges/a.jpg);
+
+}
+.box2{
+ background-image: url(/imges/b.jpg);
+    
+}
+.box3{
+ background-image: url(/imges/c.jpg);
+ background-attachment: fixed;
+    
+}
+.box4{
+ background-image: url(/imges/d.jpg);
+    
+}
+.box5{
+ background-image: url(/imges/e.jpg);
+    
+}
+
