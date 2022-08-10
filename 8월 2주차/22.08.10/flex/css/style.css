@@ -1,0 +1,104 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+   font:normal 18px/1.5 "Helvetica Neue", sans-serif;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.flex-wrapper{
+    display: flex;
+    height: 100%;    
+}
+.flex-wrapper a{
+    position: relative;
+    flex : 1; /* a가 1:1:1:1:1 */
+    transition:  all 0.4s;
+}
+.flex-wrapper a.one{
+    background: url(../images/a.jpg) no-repeat 50% 50% / cover;
+}
+.flex-wrapper a.two{
+    background: url(../images/b.jpg) no-repeat 50% 50% / cover;
+  
+}
+.flex-wrapper a.three{
+    background: url(../images/c.jpg) no-repeat 50% 50% / cover;
+}
+.flex-wrapper a.four{
+    background: url(../images/d.jpg) no-repeat 50% 50% / cover;
+}
+.flex-wrapper a.five{
+    background: url(../images/e.jpg) no-repeat 50% 50% / cover;
+}
+.flex-wrapper a:hover{
+    flex:3;
+}
+.flex-wrapper .overlay{
+    padding: 0 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center; /*세로 중앙 정렬*/
+    justify-content: center; /*(수평)가로 중앙 정렬*/
+    transition: background-color 0.4s;
+
+}
+
+.flex-wrapper a:hover .overlay{
+    background-color: rgba(0,0,0,0.5);
+   
+}
+.flex-wrapper a .overlay-inner *{/*class *  :class 밑에 있는 모든 하위요소*/
+    text-align: center;
+    color: white;
+        visibility: hidden;
+        opacity: 0;
+}
+
+.flex-wrapper .overlay-inner h2{
+    transform: translateY(-60px);
+}
+.flex-wrapper .overlay-inner p{
+    transform: translateY(60px);
+}
+
+.flex-wrapper a:hover .overlay-inner *{
+    visibility: visible;
+    opacity : 1;
+    transition: all 0.3s 0.3s; /*0.3초 뒤에 0.3초동안 진행 (지연시간 진행시간)*/
+    transform: none; /*원래 위치나 크기로 돌아옴*/
+}
+
+@media screen and (max-width:800px){
+    .flex-wrapper{
+        flex-direction: column;
+    }
+    .flex-wrapper a:hover{
+        flex :1;
+    }
+    .flex-wrapper a:hover .overlay{
+        background-color: transparent; /*투명색상*/
+    }
+    .flex-wrapper .overlay h2,
+    .flex-wrapper .overlay p{
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+    .flex-wrapper a .overlay-inner *{/*class *  :class 밑에 있는 모든 하위요소*/
+        
+            visibility: hidden;
+            opacity: 0;
+    }
+}
