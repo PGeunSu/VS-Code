@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        margin: 0 auto;
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    td,
+    th {
+        border: 1px solid black;
+        width: 30px
+    }
+
+    .main {
+        width: 500px;
+        height: 70px;
+    }
+
+    table tr:last-child {
+        height: 100px;
+    }
+</style>
+
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="3" rowspan="4"></td>
+            <th class="main" colspan="4">이력서</th>
+        </tr>
+        <tr>
+            <td rowspan="2">성명</td>
+            <td rowspan="2" colspan="2"></td>
+            <td>주민등록번호</td>
+        </tr>
+        <tr>
+            <td>001013</td>
+        </tr>
+        <tr>
+            <td>생 년 월 일</td>
+            <td colspan="3"> 20 년 월 일 생 (만 세)</td>
+        </tr>
+        <tr>
+            <td colspan="3">주소</td>
+            <td colspan="4"></td>
+        </tr>
+        <tr>
+            <td colspan="3">호적 관계</td>
+            <td>호주와의관계</td>
+            <td> </td>
+            <td>호주 성명</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3">년 월 일</td>
+            <td colspan="3">학력 및 경력사항</td>
+            <td>발령청</td>
+        </tr>
+
+        <script>
+
+            for (let i = 0; i < 20; i++) {
+                document.write('<tr style="height: 30px;">')
+                document.write('<td></td>')
+                document.write('<td></td>')
+                document.write('<td></td>')
+                document.write('<td colspan="3"></td>')
+                document.write('<td></td>')
+                document.write('<tr>')
+            }
+        </script>
+        <tr>
+            <td colspan="7"></td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>
