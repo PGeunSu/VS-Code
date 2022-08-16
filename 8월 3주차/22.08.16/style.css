@@ -1,0 +1,91 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    width: 400px;
+    height: 70px;
+    margin-bottom: 20px;
+    border: 3px solid #ccc;
+    background-color: brown;
+}
+
+p {
+    font-size: 30px;
+    padding-bottom: 30px;
+    cursor: pointer;
+}
+
+.tra {
+    background-color: #ae5329;
+    transform: translate(-410px, 0);
+    transition: all 0.5s;
+    /*현재 위체에서 x -410만큼 왼쪽으로 이동    */
+}
+
+.btn1:hover+.tra {
+    transform: translate(0, 0);
+}
+
+/* + 선택자 = 다음(next) 
+btn1에 hover하면 다음에 있는 .tra */
+
+.rot1 {
+    margin: 200px 0;
+    transform: rotate(0deg);
+    transition: all 0.5s;
+}
+
+.btn2:hover+.rot1 {
+    transform: rotate(1080deg);
+}
+
+.rot2 {
+    margin: 200px 0;
+    transform: rotateY(0deg);
+    transition: all 0.5s;
+}
+
+.btn3:hover+.rot2 {
+    transform: rotateY(1080deg);
+}
+
+.rot3 {
+    margin: 200px 0;
+    transform: rotateX(0deg);
+    transition: all 0.5s;
+}
+.btn4:hover+.rot3 {
+    transform: rotateX(1080deg);
+}
+.sca{
+    margin: 200px 0;
+    transform: scale(1);
+    transition: all 0.5s;
+}
+.btn5:hover+.sca {
+    transform: scale(3);
+}
+
+.ske{
+    margin : 50px 0;
+    transform : skewX(0deg);
+    transition:  all 0.5s;
+}
+.btn6:hover +.ske{
+    transform: skewX(45deg);
+}
+.btn6:hover +.ske span{
+    display: inline-block   ;
+    transform: skewX(-45deg);
+}
+
+.ske1{
+    margin : 50px 0;
+    transform : skewY(0deg);
+    transition:  all 0.5s;
+}
+.btn7:hover +.ske1{
+    transform: skewY(45deg);
+}
