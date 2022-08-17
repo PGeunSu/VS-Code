@@ -1,0 +1,32 @@
+1.홍보부에서 근무하는 사원의 모든 필드를 검색하는 명령을 쓰시오.
+select * from worker;
+
+2.20대인 사원의 아이디,이름,집 주소를 검색하는 명령을 쓰시오.
+select id,name,address from worker where age>20 and age<30;
+
+3.경리부에 근무하고 이름에 '정'이 들어간 사원의 이름, 성별, 근무 부서 ,휴대전화 번호를 검색하는 명령을 쓰시오.
+select name, department, phone from worker where name like "정%" and department = "경리부";
+
+4.경기도에 사는 사원을 나이순으로 오름차순 정련한 뒤 이름, 집 주소, 성별 ,휴대전화 번호를 검색하시오.
+select name, address, gender, phone from worker where address like "경기도%" order by age; 
+
+5.여성 사원을 나이순으로 내림차순 정렬 후 이름, 성별, 아이디, 번호,주소를 ,검색하시오.
+select name, gender, id, phone, address from worker where gender = "" order by age desc;
+
+6.홍보부에 근무하는 남성 사원의 이름과 휴대전화 번호를 검색하는 명령을 쓰시오
+select name,phone from worker where gender = "M" and department ="홍보부";
+
+7.용인시에 사는 사원의 이름과 휴대전화 번호를 검색하시오.
+select name, phone from worker where address like "%용인시%";
+
+8.'김영철'의 휴대전화 번호를 '010-2222-3333으로 수정하시오
+update worker set phone = '010-2222-3333' where name = "김영철";
+
+9.아이디가 'chulsu'인 사원의 나이를 '33'으로 수정하시오
+update worker set age = '33' where id = "chulsu";
+
+10.아이디가 'jhjang'인 레코드를 삭제하시오
+delete from worker where id = "jhjang";
+
+11.경리부에서 근무하는 '이세영'의 레코드를 삭제하시오
+delete from worker where name = "이세영" and department = "경리부";

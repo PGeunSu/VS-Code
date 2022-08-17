@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.bigbox{
+    width : 1000px;
+    border: 5px solid tan;
+    margin: 0 auto;
+   padding-bottom: 30px;
+   padding-right: 15px;
+}
+
+.bigbox h2{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.bigbox .box{
+    border: 5px solid lime;
+    margin-left: 32px;
+    margin-top: 30px;
+    width : 200px;
+    height: 150px; 
+    display: inline-block;     
+}
+/* .cf::after{
+    content: "";
+    clear: both;
+    display: block;
+} */
+.box1 img{
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+.box1:hover img{
+    transform: rotate(1080deg);
+}
+
+.box2 img{
+    transform-origin: left top; /*회전 시 기준점*/
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+.box2:hover img{
+    transform: rotate(1080deg);
+}
+
+.box4 {
+    perspective: 10px;
+    /*원근감 - 부모에게 코딩*/
+}
+
+.box4 img{
+    transform-origin: left top; /*회전 시 기준점*/
+    transform: rotateY(0);
+    transition: all 0.5s;
+}
+.box4:hover img{
+    transform: rotateY(1080deg);
+}
+.box3{
+    overflow: hidden;
+}
+.box3 img{
+    transform: scale(1);
+    transition: all 0.3s;
+}
+.box3:hover img{
+    transform: scale(1.5);
+}
