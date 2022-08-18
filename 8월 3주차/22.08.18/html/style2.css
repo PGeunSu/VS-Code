@@ -1,0 +1,33 @@
+.myball{
+    position: relative;
+    top: 10px;
+    height: 200px;
+    width: 150px;
+    background: url(img/bg-main1.png) no-repeat 50% 50%;
+    animation: myani 3s infinite alternate ;
+    display: inline-block;
+    margin-left: 100px;
+}
+.aa{
+    animation: myani2 3s infinite alternate ;
+    top :500px;
+ }
+
+@keyframes myani {
+    0%{
+        top :10px;
+    }
+    100%{
+        top: 600px;
+    }
+    
+}
+@keyframes myani2 {
+    0%{
+        top :500px;
+    }
+    100%{
+        top: 10px;
+    }
+    
+}

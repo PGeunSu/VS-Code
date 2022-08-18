@@ -1,0 +1,66 @@
+.myball{
+    position: relative;
+    left: 10px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: 1px solid #000;
+    background: url(img/f1.png) no-repeat 50% 50%;
+    /* animation-name : myani; /*animation 이름*/
+    /*animation-duration: 3s;animation 진행 시간 */
+    /* animation-iteration-count: infinite;/*animation 반복(동작) 횟수 infinite : 무한반복
+    animation-direction: alternate; 왕복 */
+
+    animation: myani 3s infinite alternate ; /*한 줄로 표기 가능*/
+
+    /*forwards : 도착지점에서 끝냄*/
+
+}
+@keyframes myani {
+    0%{
+        left :10px;
+    }
+    40%{
+        top: 50px;
+    background: url(img/f2.png) no-repeat 50% 50%;
+
+    }
+
+    100%{
+        left:500px;
+    }
+    
+}
+.myball2{
+    position: relative;
+    left: 500px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: 1px solid #000;
+    background: url(img/f1.png) no-repeat 50% 50%;
+    /* animation-name : myani; /*animation 이름*/
+    /*animation-duration: 3s;animation 진행 시간 */
+    /* animation-iteration-count: infinite;/*animation 반복(동작) 횟수 infinite : 무한반복
+    animation-direction: alternate; 왕복 */
+
+    animation: myani2 3s 3s infinite alternate ; /*한 줄로 표기 가능*/
+    /*animation : 이름 지속시간 (지연시간) 반복 횟수 끝나는 위치*/
+    /*3s : 3초 진행, 3s 3s : 3초뒤에 3초 진행 */
+    /*forwards : 도착지점에서 끝냄*/
+
+}
+@keyframes myani2 {
+    0%{
+        left :500px;
+    }
+    40%{
+        top: 50px;
+    background: url(img/f2.png) no-repeat 50% 50%;
+
+    }
+
+    100%{
+        left:10px;
+    }
+}
