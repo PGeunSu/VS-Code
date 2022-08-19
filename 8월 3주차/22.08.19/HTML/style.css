@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+.cf::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.wrap{
+    width: 900px;
+    height: auto;
+    margin : 100px auto 0;
+            /*위  오른쪽 아래 왼쪽*/
+}
+#header{
+    margin: 5px;
+}
+.one>li{ /*자식 선택자*/
+    float: left;
+}
+        
+.one li{
+    background-color:  #b5b2ff;
+}
+.one li a{
+    display: block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color : #000;
+}
+    
+.one li ul{ /* ul (submenu)를 안 보이게*/
+    display : none;
+    position: absolute;
+}
+.one li:hover ul{ /* hover 시 ul (submenu)를 보이게*/
+    display: block;
+    
+}

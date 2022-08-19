@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bigbox {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+}
+
+.face {
+    width: 500px;
+    height: 450px;
+    border-radius: 50%;
+    /*padding 이나 border 포함 넓이*/
+    box-sizing: border-box;
+    border: 10px solid black;
+    background-color: #d59729;
+    position: absolute;
+    bottom: 0;
+}
+
+.ear {
+    width: 150px;
+    height: 150px;
+    border: 10px solid black;
+    border-radius: 50%;
+    background-color: #d59729;
+    top: 20px;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.ear.left {
+    left: 40px;
+}
+
+.ear.right {
+    right: 40px;
+}
+
+.eyebrow {
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 7px;
+    background-color: #000;
+    position: absolute;
+    top: 120px;
+
+}
+
+.eyebrow.left {
+    left: 100px;
+}
+
+.eyebrow.right {
+    right: 100px;
+}
+
+.eyeball {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    top: 180px;
+}
+
+.eyeball.left {
+    left: 140px;
+}
+
+.eyeball.right {
+    right: 140px;
+}
+
+.nose {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    top: 230px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+}
+
+.mouth {
+    width: 80px;
+    height: 74px;
+    border: 10px solid #000;
+    box-sizing: border-box;
+    background-color: #FFF;
+    position: absolute;
+    border-radius: 50%;
+    top: 240px;
+
+}
+
+.mouth.left {
+    left: 175px;
+}
+
+.mouth.right {
+    right: 175px;
+}
+.mouth_cover{
+    width: 37px;
+    height: 40px;
+    background-color: white;
+    top: 2px;
+    position: absolute;
+    transform: rotate(45deg);
+}
+.mouth_cover.left{
+    left: 30px;
+    z-index: 1;
+}
+.mouth_cover.right{
+    right: 43px;
+}
