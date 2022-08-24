@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    <script>
+        let addNum = 0;
+        //setInterval() 메서드는 코드를 일정시간 간격으로 반복 실행
+        let auto_1 = setInterval(function () {
+            addNum++;
+            console.log(addNum);
+            // document.write(addNum + ",");
+        }, 500)
+    </script>
+</head>
+
+<body>
+    <h1>일정 시간 간격으로 값 증가 시키기</h1>
+    <button onclick="clearInterval(auto_1)">일시 정지</button>
+    <button onclick="setInterval(auto_1)">재시작</button>
+</body>
+
+</html>

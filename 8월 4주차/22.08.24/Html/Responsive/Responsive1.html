@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 25%;
+            height: 200px;
+        }
+
+        .box1 {
+            background-color: aqua;
+        }
+
+        .box2 {
+            background-color: rgb(57, 80, 80);
+        }
+
+        .box3 {
+            background-color: rgb(39, 33, 126);
+        }
+
+        .box4 {
+            background-color: rgb(140, 167, 42);
+        }
+
+        @media screen and (max-width:600px) {
+
+            /* 스마트폰용 미디어 쿼리*/
+            .box {
+                float: none;
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width:601px) and (max-width:1023px) {
+
+            /* 스마트패드 미디어 쿼리*/
+            .box {
+                float: left;
+                width: 50%;
+            }
+        }
+
+        @media screen and (min-width:1024px) {
+
+            /* 데스크탑 미디어 쿼리*/
+            .box {
+                float: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+</body>
+
+</html>
