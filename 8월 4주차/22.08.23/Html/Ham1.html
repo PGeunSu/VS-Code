@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        header {
+            width: 100%;
+            height: 70px;
+            position: relative;
+            background-color: skyblue;
+        }
+
+        header h1 {
+            line-height: 70px;
+            height: 70px;
+            text-align: center;
+        }
+
+        header p.ham {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 10px;
+            right: 10px;
+            border: 1px solid black;
+            text-indent: -9999px;
+            /*글씨 숨기기*/
+            background: url(img/ham.png) no-repeat 50% 50%;
+            cursor: pointer;
+        }
+
+        header p.ham.on {
+            background: url(img/bar.png) no-repeat 50% 50%;
+
+        }
+
+        nav {
+            width: 200px;
+            background-color: lime;
+            padding: 10px 0;
+            position: absolute;
+            top: 70px;
+            right: -200px;
+            transition: all 0.3s;
+        }
+
+        .active {
+            right: 0;
+        }
+
+        nav ul li {
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .sub {
+            display: none;
+            transition: all 0.3s;
+        }
+
+        #navi>li>a {
+            display: block;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('.ham').click(function () {
+                let st = $(this).hasClass('on');
+                //if($(this).hasClass('on')) == 
+                if (st == false) {
+                    $(this).addClass('on');
+                    $('nav').addClass('active');
+
+                } else {
+                    $(this).removeClass('on');
+                    $('nav').removeClass('active');
+                }
+            });
+        });
+
+        $("#navi > li > a").click(function () {
+            $(this).next('.sub').slideToggle();
+            return false;
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>경일게임아카데미</h1>
+        <p class="ham">메뉴바</p>
+
+    </header>
+    <nav>
+        <ul id="navi">
+            <li><a href="#">회사소개</a>
+                <ul class="sub">
+                    <li>서브1</li>
+                    <li>서브2</li>
+                    <li>서브3</li>
+                </ul>
+            </li>
+            <li><a href="#">제품소개</a>
+                <ul class="sub">
+                    <li>서브1</li>
+                    <li>서브2</li>
+                    <li>서브3</li>
+                </ul>
+            </li>
+            <li><a href="#">커뮤니티</a>
+                <ul class="sub">
+                    <li>서브1</li>
+                    <li>서브2</li>
+                    <li>서브3</li>
+                </ul>
+            </li>
+            <li><a href="#">다운로드</a>
+                <ul class="sub">
+                    <li>서브1</li>
+                    <li>서브2</li>
+                    <li>서브3</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>
