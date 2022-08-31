@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        // $.getJSON("demo_ajax_json.js", function (result) {
+        //     $.each(result, function (i, field) {
+        //         $("div").append(field + " ");
+        //     });
+        // });
+
+        // $.getJSON("날시파일 경로", function (data) {
+        //    data가 할일
+        // });
+
+        $.getJSON("https://api.openweathermap.org/data/2.5/forecast?id=1832847&appid=edfe27c97952422a65c6f6c01a15131d",
+            function (data) { //alert(data.cod); : 코드 조회방법  alert(data.city.name); : 도시 조회
+                //  alert(data.list[0].main.temp_max); : 최고온도
+                let $cTemp = data.list[0].main.temp;
+                let $cLow_temp = data.list[0].main.temp_min;
+                let $cHigh_temp = data.list[0].main.temp_max;
+                let $cDate = data.list[0].dt_txt; //시간
+                let $wIcon = data.list[0].weathr[0].icon;
+
+                $(".ctemp").append($cTemp);
+                $('.clow_temp').append($cLow_temp);
+                $('.chigh_temp').append($cHigh_temp);
+                $('h2').prepend($cDate);
+
+                // http://openweathermap.org/img/wn/10d@2x.png  - 아이콘
+
+                //https://openweathermap.org/weather-conditions - 아이콘이 있는 주소
+
+                $(".wicon").append('<img src="http://openweathermap.org/img/wn/' + $wIcon + '@2x.png">');
+
+            });
+
+    </script>
+
+</head>
+
+<body>
+    <h1>Weather API</h1>
+    <h2> - 날씨 예보</h2>
+    <div class="ctemp">현재 온도 : </div>
+    <div class="clow_temp">최저 온도 : </div>
+    <div class="chigh_temp">최고 온도 : </div>
+    <div class="wicon">아이콘 : </div>
+</body>
+
+</html>

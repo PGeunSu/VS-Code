@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        /* 
+          $.getJSON("demo_ajax_json.js", function(result){
+              $.each(result, function(i, field){
+                $("div").append(field + " ");
+              });
+            });
+        $.getJSON("날씨 파일 경로", function(data){
+              data가 할일
+            });
+  
+  
+  */
+
+        $.getJSON(
+            "https://api.openweathermap.org/data/2.5/forecast?id=1835848&appid=079b8942e0b5aa9292436aca492ee8f0&units=metric",
+            function (data) {
+                //alert(data.cod);
+                //alert(data.city.name);
+                //alert(data.list[2].main.temp_max);
+                var $cTemp = data.list[0].main.temp;
+                var $maxTemp = data.list[0].main.temp_max;
+                var $minTemp = data.list[0].main.temp_min;
+                var $cDate = data.list[0].dt_txt; //예보시간
+                var $wIcon = data.list[0].weather[0].icon;
+                $(".ctemp").append($cTemp); //뒤에 추가
+                $(".chightemp").append($maxTemp);
+                $(".clowtemp").append($minTemp);
+                $("h2").prepend($cDate); //앞에 추가
+                //$(".cicon").append($wIcon);
+                // http://openweathermap.org/img/wn/10d@2x.png
+
+                // https://openweathermap.org/weather-conditions   -  아이콘이 있는 주소
+
+                $(".cicon").append(
+                    '<img src="http://openweathermap.org/img/wn/' + $wIcon + '@2x.png">'
+                );
+            }
+        );
+    </script>
+</head>
+
+<body>
+    <h1>Weather api</h1>
+    <h2>- 날씨예보</h2>
+    <div class="ctemp">현재 온도:</div>
+    <div class="clowtemp">최저 온도:</div>
+    <div class="chightemp">최고 온도:</div>
+    <div class="cicon">아이콘:</div>
+</body>
+
+</html>
