@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document, onmousemove = function (e) {
+            var theEvent = e ? e : window.event;
+            //조건? 참 : 거짓 - explorer 8이하에서 객체생성
+            var x = theEvent.clientX; //마우스가 움직일 때 생성된 객체의 x좌표
+            //var x = theEvent.pageX;
+            var y = theEvent.clientY;
+
+            document.getElementById("m1").innerHTML = x;
+            //$("$m1").text(x);
+            document.getElementById("m2").innerHTML = y;
+
+        }
+
+
+    </script>
+
+    <style>
+        #wrap {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            cursor: url(/images/mouse_img_32.png), auto;
+        }
+
+        #wrap:active {
+            cursor: url(/images/mouse_img_128.png), auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1 id="m1">0000</h1>
+        <h1 id="m2">0000</h1>
+    </div>
+
+</body>
+
+</html>
