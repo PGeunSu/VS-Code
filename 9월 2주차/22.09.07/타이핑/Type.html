@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="/typed.js"></script>
+    <script>
+        $(function () { //타이핑 효과
+            let count = 0;
+            let text1 = $("#text");
+            let msg;
+            let comp;
+            let kkk;
+
+            function main() {
+                msg = text1.text(); //#text1 글자를 msg에 대입
+                comp = msg.length; //글자의 갯수 (30)
+
+                tata();
+            };
+
+            function tata() {
+                if (count <= comp) {
+                    kkk = msg.substring(0, count);
+                    //substring(indexStart, intdexEnd)
+                    text1.text(kkk);
+                    count++;
+                    setTimeout(tata, 100); //0.1초마다 tata함수를 부른다.(재귀함수)
+                } else {
+                    count = 0;
+                    main();
+                }
+            }
+
+            main();
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <h1 id="text">타이핑 효과를 타다다다.........타이핑 효과를 타다다다.........</h1>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="/typed.js"></script>
+    <script>
+        $(function () {
+            let typed2 = new Typed("#typed1", {
+                strings: ["원하는 글씨를", "순서대로", "출력합니다.",],
+                typeSpeed: 20,
+                backSpeed: 20,
+                attr: "placeholder",
+                bindInputFocousEvents: true, //클릭하는 순간 멈추고 input 작성가능
+                loop: true,
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <input type="text" id="typed1">
+
+</body>
+
+</html>
