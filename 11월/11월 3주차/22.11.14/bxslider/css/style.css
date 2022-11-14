@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 960px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: pink;
+}
+section{
+    width: 960px;
+    height: 800px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
