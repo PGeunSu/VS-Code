@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style: none;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+.header_out{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    z-index: 10;
+}
+.header{
+    width: 1000px;
+    height: 400px;
+    position: relative;
+    border: 1px solid #333;
+    margin: 0 auto;
+    z-index: 10;
+}
+.logo{
+    position: absolute;
+    width: 250px;
+    height: 90px;
+    left: 50%;
+    top: 50%;
+    margin-left: -126px;
+    margin-top: -98px; 
+}
+#logo img{
+    width: 100%;
+    height: 100%;
+}
+.sns{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+.sns li{
+    float: left;
+    margin-left: 10px;
+}
+.lnb{
+    position:absolute;
+    right:10px;
+    top:20px;
+    font-size: 13px;
+ }
+
+.lnb li{
+    float: left;
+    padding: 0 10px;
+    background: url(../images/bar.png) no-repeat right center;
+}
+.lnb li:last-child{
+    background: none;
+}
+
+.main_nav{
+    position: absolute;
+    top: 220px;
+    width: 100%;
+    height: 30px;
+    background-color: aqua;
+    left: 0;
+ }
+ 
+ .main_nav > ul {
+    width: 1200px;
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+ }
+
+ .main_nav ul li{
+    width:200px;
+    height:30px;
+    text-align:center;
+ }
+ .main_nav ul li a{
+    display:block;
+    width:200px;
+    height:30px;
+    line-height:30px;
+ }
+
+ .main_nav ul li ul{
+    background: rgba(225,225,255,0.7);
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.main_nav ul:hover + li ul{
+    width: 240px;
+    padding: 10px 0;
+}
+.main_nav ul:hover + .shadow{
+    height: 250px;
+}
+ 
+
+.main_nav ul:hover + li ul{
+    width: 240px;
+    padding: 10px 0;
+}
+.main_nav ul:hover + .shadow{
+    height: 250px;
+}
+
+
+
+
+.main1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 250px;
+}
+.main1 img{
+    width: 100%;
+    height: 100%;
+}
+
+.shadow{
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 100%;
+    height: 0px;
+    background-color: bisque;
+    transition: all 0.3s;
+}
