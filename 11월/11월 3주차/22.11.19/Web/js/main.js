@@ -123,5 +123,39 @@ $(function(){
            
         }
     });
-    
+
+    var d1 = $("#s5").offset().top;
+    var e1 = $("#s6").offset().top;
+    var f_box = $(".fix_box").offset().top;
+
+    $(window).scroll(function(){
+        var sct = $(this).scrollTop(); //스크롤의 위치값
+        $(".fix_box").stop().animate({top:sct+f_box},500);
+        if(d1 < sct + 700){
+            $(".s5_contents").addClass("slide1");
+        }
+        if(e1 < sct + 700){
+            $(".left1").addClass("slide1");
+        }
+        
+});
+
+$('.popup1').draggable();
+
+if($.cookie("popup1") == "none"){
+    $(".popup1").hide();
+}
+
+$(".btn2").click(function(){
+    $(".popup1").fadeOut("fast");
+});
+
+$(".btn1").click(function(){
+    $.cookie("popup1", "none", {expires : 1});
+    $(".popup1").fadeOut("fast");
+})
+
+
+
+
 });
