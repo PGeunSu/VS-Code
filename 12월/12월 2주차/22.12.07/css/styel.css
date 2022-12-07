@@ -1,0 +1,125 @@
+/* 영어 기본폰트 잡아주기 */
+body{font: normal 15px 'RalewayL'; color: #444;}
+@font-face{font-family: 'RalewayL'; src:url(../font/Raleway-Light.ttf);}
+@font-face{font-family: 'RalewayT'; src:url(../font/Raleway-Thin.ttf);}
+@font-face{font-family: 'SpoqaB'; src:url(../font/SpoqaHanSansBold.ttf);}
+@font-face{font-family: 'SpoqaL'; src:url(../font/SpoqaHanSansLight.ttf), url(../font/NanumSquare_acR.ttf), url(../font/SpoqaHanSansLight.woff);}
+@font-face{font-family: 'SpoqaR'; src:url(../font/SpoqaHanSansRegular.ttf), url(../font/SanumSquare_acR.ttf), url(../font/SpoqaHanSansRegular.woff);}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+    font:400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color:#818181;
+  }
+  h2{
+    font-size: 50px;
+    text-transform: uppercase;
+    color:#303030;
+    font-weight: 600;
+    margin-bottom: 50px;
+  }
+  h4{
+    font-size: 20px;
+    line-height: 1.375em;
+    color:#303030;
+    font-weight: 400;
+    margin-bottom: 50px;
+  }
+  .info{
+    margin-top: 150px;
+    width: 600px;
+  }
+  .info p{
+    font-size: 20px;
+  }
+  
+  .container-fluid{
+    padding: 60px 50px;
+  }
+  .bg-gray{
+    background-color: #f6f6f6;
+  }
+  .logo-small{
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo{
+    color: #f4511e;
+    font-size:400px;
+    margin : 100px 100px;
+    margin-left: 200px;
+  
+  }
+  .navbar{
+    margin-bottom: 0;
+    background-color: #f4511e;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important; 
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+.navbar li a, .navbar .navbar-brand{
+    color: #fff !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a{
+    color:  #f4511e !important;
+    background-color: #fff  !important;
+}
+ul{
+  list-style: none;
+  margin-left: -40px;
+}
+h3{
+  margin-top: 5px;
+}
+.port{
+  text-align: center;
+  margin-top: 30px;
+  font-size: 50px;
+}
+
+#portfolio2{
+  margin-top: 70px;
+  overflow: hidden;
+  background: url(../images/2323334.jpg);
+  background-size: cover;
+}
+.portfolio_main{
+  padding: 5vw;
+}
+.portfolio_main .img{
+  background: url(../img/dasoni.png) no-repeat 0 50% / 100%;
+  height: 30vw;
+}
+.portfolio_main .text{
+  padding-top: 100px;
+  margin-top: 10px;
+}
+.portfolio_main .text h4{
+  margin-bottom: 20px;
+}
+.portfolio_main .text h5{
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 100px;
+}
+.portfolio_main .text p{
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+@media screen and (max-width:992px) {
+  .portfolio_main .img{
+    background-position: 50% 50%;
+    background-size: 70%;
+  }
+  
+}
+
